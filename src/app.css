@@ -1,3 +1,5 @@
+@import-normalize;
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -19,12 +21,17 @@ body {
   height: 100vh;
 }
 
+.sidebar {
+  grid-area: sidebar;
+  background-color: #ff473a;
+}
+
 .chat {
   grid-area: chat;
-  background-color: mediumorchid;
+  background-color: #ffffff;
 }
 
 .input {
   grid-area: input;
-  background-color: cornflowerblue;
+  background-color: #ffffff;
 }

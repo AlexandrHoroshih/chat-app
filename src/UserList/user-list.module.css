@@ -1,0 +1,31 @@
+.list {
+  display: flex;
+  flex-flow: column nowrap;
+  padding-top: 16px;
+  padding-left: 16px;
+}
+
+.listTitle {
+  font-size: 36px;
+  line-height: 1.25;
+  color: white;
+  font-weight: 700;
+}
+
+.listContent {
+  display: flex;
+  flex-flow: column nowrap;
+  list-style-type: none;
+  padding: 16px;
+}
+
+.listItem {
+  color: white;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 500;
+}
+
+.listItem + .listItem {
+  padding-top: 16px;
+}

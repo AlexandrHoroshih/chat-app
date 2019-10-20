@@ -1,0 +1,35 @@
+.inputGridWrapper {
+  display: grid;
+  grid-template-columns: 15fr 5fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'input button';
+  height: 100%;
+}
+
+.input {
+  grid-area: input;
+  border: none;
+  font-size: 24px;
+  line-height: 1.25;
+  border-radius: 8px;
+  padding: 16px;
+  height: 100%;
+}
+
+.button {
+  grid-area: button;
+  background: none;
+  border: none;
+  height: 100%;
+}
+
+.sendIcon {
+  fill: #00b0de;
+  width: 40px;
+  height: 40px;
+}
+
+.button:hover .sendIcon,
+.button:focus .sendIcon {
+  fill: #196ebd;
+}

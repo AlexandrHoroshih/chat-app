@@ -16,10 +16,7 @@
 
 .myMessageWrapper {
   justify-content: flex-end;
-}
-
-.messageWrapper + .messageWrapper {
-  padding-bottom: 16px;
+  padding-top: 20px;
 }
 
 .message {

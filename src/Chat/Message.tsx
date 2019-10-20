@@ -5,9 +5,15 @@ interface Props {
   isMyMessage: boolean;
   userName: string;
   message: string;
+  datetime?: string;
 }
 
-const Message: React.FC<Props> = ({ isMyMessage, userName, message }) => {
+const Message: React.FC<Props> = ({
+  isMyMessage,
+  userName,
+  message,
+  datetime,
+}) => {
   return (
     <div
       className={
@@ -17,6 +23,7 @@ const Message: React.FC<Props> = ({ isMyMessage, userName, message }) => {
       <div className={classes.message}>
         <h3 className={classes.username}>{userName}</h3>
         <p>{message}</p>
+        <time>{datetime}</time>
       </div>
     </div>
   );

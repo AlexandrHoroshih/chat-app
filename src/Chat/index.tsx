@@ -15,6 +15,116 @@ const Chat: React.FC = () => {
         userName={'Not Sasha'}
         message={'aldksmdgsldgkmsdlgkmsdlgm'}
       />
+      <Message
+        isMyMessage={false}
+        userName={'Sasha'}
+        message={'message message message'}
+      />
+      <Message
+        isMyMessage={true}
+        userName={'Not Sasha'}
+        message={'aldksmdgsldgkmsdlgkmsdlgm'}
+      />
+      <Message
+        isMyMessage={false}
+        userName={'Sasha'}
+        message={'message message message'}
+      />
+      <Message
+        isMyMessage={true}
+        userName={'Not Sasha'}
+        message={'aldksmdgsldgkmsdlgkmsdlgm'}
+      />
+      <Message
+        isMyMessage={false}
+        userName={'Sasha'}
+        message={'message message message'}
+      />
+      <Message
+        isMyMessage={true}
+        userName={'Not Sasha'}
+        message={'aldksmdgsldgkmsdlgkmsdlgm'}
+      />
+      <Message
+        isMyMessage={false}
+        userName={'Sasha'}
+        message={'message message message'}
+      />
+      <Message
+        isMyMessage={true}
+        userName={'Not Sasha'}
+        message={'aldksmdgsldgkmsdlgkmsdlgm'}
+      />
+      <Message
+        isMyMessage={false}
+        userName={'Sasha'}
+        message={'message message message'}
+      />
+      <Message
+        isMyMessage={true}
+        userName={'Not Sasha'}
+        message={'aldksmdgsldgkmsdlgkmsdlgm'}
+      />
+      <Message
+        isMyMessage={false}
+        userName={'Sasha'}
+        message={'message message message'}
+      />
+      <Message
+        isMyMessage={true}
+        userName={'Not Sasha'}
+        message={'aldksmdgsldgkmsdlgkmsdlgm'}
+      />
+      <Message
+        isMyMessage={false}
+        userName={'Sasha'}
+        message={'message message message'}
+      />
+      <Message
+        isMyMessage={true}
+        userName={'Not Sasha'}
+        message={'aldksmdgsldgkmsdlgkmsdlgm'}
+      />
+      <Message
+        isMyMessage={false}
+        userName={'Sasha'}
+        message={'message message message'}
+      />
+      <Message
+        isMyMessage={true}
+        userName={'Not Sasha'}
+        message={'aldksmdgsldgkmsdlgkmsdlgm'}
+      />
+      <Message
+        isMyMessage={false}
+        userName={'Sasha'}
+        message={'message message message'}
+      />
+      <Message
+        isMyMessage={true}
+        userName={'Not Sasha'}
+        message={'aldksmdgsldgkmsdlgkmsdlgm'}
+      />
+      <Message
+        isMyMessage={false}
+        userName={'Sasha'}
+        message={'message message message'}
+      />
+      <Message
+        isMyMessage={true}
+        userName={'Not Sasha'}
+        message={'aldksmdgsldgkmsdlgkmsdlgm'}
+      />
+      <Message
+        isMyMessage={false}
+        userName={'Sasha'}
+        message={'message message message'}
+      />
+      <Message
+        isMyMessage={true}
+        userName={'Not Sasha'}
+        message={'aldksmdgsldgkmsdlgkmsdlgm'}
+      />
     </div>
   );
 };

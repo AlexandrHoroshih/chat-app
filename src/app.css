@@ -13,25 +13,38 @@ body {
 .layout {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 100px;
+  grid-template-rows: 15fr 5fr;
   grid-template-areas:
     'sidebar chat'
     'sidebar input';
   width: 100vw;
   height: 100vh;
+  background: linear-gradient(
+    151.09deg,
+    #00b0de 0.36%,
+    #01aedc 4.04%,
+    #02abdb 7.77%,
+    #02abdb 11.48%,
+    #02abdb 11.7%,
+    #196ebd 100%
+  );
 }
 
 .sidebar {
   grid-area: sidebar;
-  background-color: #ff473a;
 }
 
 .chat {
   grid-area: chat;
-  background-color: #ffffff;
+  background-color: #f8fcff;
+  border-radius: 8px;
+  margin: 16px 60px 0px 0px;
 }
 
 .input {
   grid-area: input;
-  background-color: #ffffff;
+  margin: 32px 60px 24px 0px;
+  height: 60px;
+  border-radius: 8px;
+  background: #f8fcff;
 }

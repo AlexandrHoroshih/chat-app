@@ -9,121 +9,13 @@ const Chat: React.FC = () => {
         isMyMessage={false}
         userName={'Sasha'}
         message={'message message message'}
+        datetime={'5 minutes ago'}
       />
       <Message
         isMyMessage={true}
         userName={'Not Sasha'}
         message={'aldksmdgsldgkmsdlgkmsdlgm'}
-      />
-      <Message
-        isMyMessage={false}
-        userName={'Sasha'}
-        message={'message message message'}
-      />
-      <Message
-        isMyMessage={true}
-        userName={'Not Sasha'}
-        message={'aldksmdgsldgkmsdlgkmsdlgm'}
-      />
-      <Message
-        isMyMessage={false}
-        userName={'Sasha'}
-        message={'message message message'}
-      />
-      <Message
-        isMyMessage={true}
-        userName={'Not Sasha'}
-        message={'aldksmdgsldgkmsdlgkmsdlgm'}
-      />
-      <Message
-        isMyMessage={false}
-        userName={'Sasha'}
-        message={'message message message'}
-      />
-      <Message
-        isMyMessage={true}
-        userName={'Not Sasha'}
-        message={'aldksmdgsldgkmsdlgkmsdlgm'}
-      />
-      <Message
-        isMyMessage={false}
-        userName={'Sasha'}
-        message={'message message message'}
-      />
-      <Message
-        isMyMessage={true}
-        userName={'Not Sasha'}
-        message={'aldksmdgsldgkmsdlgkmsdlgm'}
-      />
-      <Message
-        isMyMessage={false}
-        userName={'Sasha'}
-        message={'message message message'}
-      />
-      <Message
-        isMyMessage={true}
-        userName={'Not Sasha'}
-        message={'aldksmdgsldgkmsdlgkmsdlgm'}
-      />
-      <Message
-        isMyMessage={false}
-        userName={'Sasha'}
-        message={'message message message'}
-      />
-      <Message
-        isMyMessage={true}
-        userName={'Not Sasha'}
-        message={'aldksmdgsldgkmsdlgkmsdlgm'}
-      />
-      <Message
-        isMyMessage={false}
-        userName={'Sasha'}
-        message={'message message message'}
-      />
-      <Message
-        isMyMessage={true}
-        userName={'Not Sasha'}
-        message={'aldksmdgsldgkmsdlgkmsdlgm'}
-      />
-      <Message
-        isMyMessage={false}
-        userName={'Sasha'}
-        message={'message message message'}
-      />
-      <Message
-        isMyMessage={true}
-        userName={'Not Sasha'}
-        message={'aldksmdgsldgkmsdlgkmsdlgm'}
-      />
-      <Message
-        isMyMessage={false}
-        userName={'Sasha'}
-        message={'message message message'}
-      />
-      <Message
-        isMyMessage={true}
-        userName={'Not Sasha'}
-        message={'aldksmdgsldgkmsdlgkmsdlgm'}
-      />
-      <Message
-        isMyMessage={false}
-        userName={'Sasha'}
-        message={'message message message'}
-      />
-      <Message
-        isMyMessage={true}
-        userName={'Not Sasha'}
-        message={'aldksmdgsldgkmsdlgkmsdlgm'}
-      />
-      <Message
-        isMyMessage={false}
-        userName={'Sasha'}
-        message={'message message message'}
-      />
-      <Message
-        isMyMessage={true}
-        userName={'Not Sasha'}
-        message={'aldksmdgsldgkmsdlgkmsdlgm'}
+        datetime={'2 minutes ago'}
       />
     </div>
   );

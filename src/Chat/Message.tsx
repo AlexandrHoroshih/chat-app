@@ -22,7 +22,7 @@ const Message: React.FC<Props> = ({
     >
       <div className={classes.message}>
         <h3 className={classes.username}>{userName}</h3>
-        <p>{message}</p>
+        <p className={classes.text}>{message}</p>
         <time className={classes.datetime}>{datetime}</time>
       </div>
     </div>

@@ -14,7 +14,9 @@ const Chat: React.FC = () => {
       <Message
         isMyMessage={true}
         userName={'Not Sasha'}
-        message={'aldksmdgsldgkmsdlgkmsdlgm'}
+        message={
+          'aldksmdgsldgkmsdlgkmsdlgm skdgskdgsdhjsd sdhbsjhbsdfjh sds jhsbdfjhbdjhs  shd sjdhsdjh'
+        }
         datetime={'2 minutes ago'}
       />
     </div>

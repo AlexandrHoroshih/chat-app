@@ -1,8 +1,12 @@
 import React from 'react';
+import { observer } from 'mobx-react';
+import { chatStore } from '../stores/chatStore';
 import { Message } from './Message';
 import classes from './chat.module.css';
 
-const Chat: React.FC = () => {
+const Chat: React.FC = observer(() => {
+  const store = React.useContext(chatStore);
+
   return (
     <div className={classes.chatWrapper}>
       <Message
@@ -21,6 +25,6 @@ const Chat: React.FC = () => {
       />
     </div>
   );
-};
+});
 
 export { Chat };

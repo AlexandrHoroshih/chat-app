@@ -1,34 +1,51 @@
 import { observable, action, computed } from 'mobx';
 import { createContext } from 'react';
 
-export type User = {
-  id?: number;
+export interface IUser {
+  id: number;
   name: string;
-};
+}
 
-export type Message = {
+export interface IMessage {
   userId?: number;
   username: string;
   text: string;
   datetime: string;
-};
+}
 
 class Store {
+  idCounter: number = 0;
+  @observable myUser: IUser = { id: -1, name: '' };
   @observable isLoading: boolean = false;
-  @observable users: User[] = [];
-  @observable messages: Message[] = [];
+  @observable users: IUser[] = [];
+  @observable messages: IMessage[] = [];
 
-  @computed userList: string[] = this.users.map(user => user.name);
+  @computed get userCount(): number {
+    return this.users.length;
+  }
 
-  @action addUser = (user: User): void => {
-    this.users.push(user);
+  @action setMyUser = (username: string): void => {
+    this.myUser = {
+      id: this.idCounter + 1,
+      name: username,
+    };
+    this.users.push(this.myUser);
+    this.idCounter = this.idCounter + 1;
   };
 
-  @action addMessage = (message: Message): void => {
+  @action addUser = (username: string): void => {
+    this.users.push({
+      id: this.idCounter + 1,
+      name: username,
+    });
+    this.idCounter = this.idCounter + 1;
+  };
+
+  @action addMessage = (message: IMessage): void => {
     this.messages.push(message);
   };
 
-  @action removeUser = (user: User): void => {
+  @action removeUser = (user: IUser): void => {
     this.users = this.users.filter(item => item.id !== user.id);
   };
 }

@@ -6,12 +6,19 @@ export interface IUser {
   username: string;
 }
 
+interface MessageStored {
+  id: number;
+  username: string;
+  text: string;
+  datetime: Date;
+}
+
 export interface IMessage {
   id: number;
   username: string;
   text: string;
-  datetime: string;
 }
+// todo: refactor handling datetimes
 
 class Store {
   idCounter: number = 0;
@@ -20,7 +27,7 @@ class Store {
   @observable registred: boolean = false;
   @observable isLoading: boolean = false;
   @observable users: IUser[] = [];
-  @observable messages: IMessage[] = [];
+  @observable messages: MessageStored[] = [];
 
   @computed get userCount(): number {
     return this.users.length;
@@ -45,7 +52,10 @@ class Store {
   };
 
   @action addMessage = (message: IMessage): void => {
-    this.messages.push(message);
+    this.messages.push({
+      ...message,
+      datetime: new Date(),
+    });
   };
 
   @action removeUser = (user: IUser): void => {

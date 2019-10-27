@@ -25,7 +25,6 @@ const Input: React.FC = observer(() => {
         id,
         username,
         text: `Hi! My name is ${input}`,
-        datetime: 'datetime',
       });
       setInput('');
     } else {
@@ -34,7 +33,6 @@ const Input: React.FC = observer(() => {
         id,
         username,
         text: input,
-        datetime: 'datetime',
       });
       setInput('');
     }

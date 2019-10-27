@@ -7,6 +7,7 @@
     "@types/node": "12.11.1",
     "@types/react": "16.9.9",
     "@types/react-dom": "16.9.2",
+    "date-fns": "^2.6.0",
     "mobx": "^5.14.0",
     "mobx-react": "^6.1.4",
     "react": "^16.10.2",

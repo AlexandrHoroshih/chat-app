@@ -1,25 +1,24 @@
 import { observable, action, computed } from 'mobx';
+import { createContext } from 'react';
 
-type User = {
-  id: number;
+export type User = {
+  id?: number;
   name: string;
 };
 
-type Message = {
-  userId: number;
+export type Message = {
+  userId?: number;
   username: string;
   text: string;
   datetime: string;
 };
 
-export class chatStore {
+class Store {
   @observable isLoading: boolean = false;
   @observable users: User[] = [];
   @observable messages: Message[] = [];
 
-  @computed get userList(): string[] {
-    return this.users.map(user => user.name);
-  }
+  @computed userList: string[] = this.users.map(user => user.name);
 
   @action addUser = (user: User): void => {
     this.users.push(user);
@@ -33,3 +32,5 @@ export class chatStore {
     this.users = this.users.filter(item => item.id !== user.id);
   };
 }
+
+export const chatStore = createContext(new Store());

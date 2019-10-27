@@ -13,7 +13,7 @@ const UserList: React.FC = observer(() => {
       >{`Now in the chat(${store.userCount}):`}</h2>
       <ul className={classes.listContent}>
         {store.users.map((user: IUser) => {
-          return <li className={classes.listItem}>{user.name}</li>;
+          return <li className={classes.listItem}>{user.username}</li>;
         })}
       </ul>
     </div>

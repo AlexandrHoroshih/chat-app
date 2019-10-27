@@ -3,11 +3,11 @@ import { createContext } from 'react';
 
 export interface IUser {
   id: number;
-  name: string;
+  username: string;
 }
 
 export interface IMessage {
-  userId?: number;
+  id: number;
   username: string;
   text: string;
   datetime: string;
@@ -15,7 +15,9 @@ export interface IMessage {
 
 class Store {
   idCounter: number = 0;
-  @observable myUser: IUser = { id: -1, name: '' };
+
+  @observable myUser: IUser = { id: -1, username: '' };
+  @observable registred: boolean = false;
   @observable isLoading: boolean = false;
   @observable users: IUser[] = [];
   @observable messages: IMessage[] = [];
@@ -27,16 +29,17 @@ class Store {
   @action setMyUser = (username: string): void => {
     this.myUser = {
       id: this.idCounter + 1,
-      name: username,
+      username,
     };
     this.users.push(this.myUser);
     this.idCounter = this.idCounter + 1;
+    this.registred = true;
   };
 
   @action addUser = (username: string): void => {
     this.users.push({
       id: this.idCounter + 1,
-      name: username,
+      username,
     });
     this.idCounter = this.idCounter + 1;
   };

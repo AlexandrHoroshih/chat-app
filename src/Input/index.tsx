@@ -20,6 +20,13 @@ const Input: React.FC = observer(() => {
   const onSend = (): void => {
     if (!store.registred) {
       store.setMyUser(input);
+      const { id, username } = store.myUser;
+      store.addMessage({
+        id,
+        username,
+        text: `Hi! My name is ${input}`,
+        datetime: 'datetime',
+      });
       setInput('');
     } else {
       const { id, username } = store.myUser;

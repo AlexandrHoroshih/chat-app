@@ -1,41 +1,18 @@
-const ws = require('ws');
+const express = require('express');
+const socket = require('socket.io');
 
-const wss = new ws().Server({ port: 8989 });
+const app = express();
 
-enum WsEvents {
-  CONNECTION = 'connection',
-  MESSAGE = 'message',
-  CLOSE = 'close',
-}
+const port = 3000;
 
-interface User {
-  id: number;
-  username: string;
-}
+app.use('/', express.static('../build'));
 
-const users: User[] = [];
+const server = app.listen(port, function() {
+  console.log('Running on port: ' + port);
+});
 
-const broadcast = (data, myWs) => {
-  wss.clients.forEach(client => {
-    if (client.readyState === ws.OPEN && client !== myWs) {
-      client.send(JSON.stringify(data));
-    }
-  });
-};
+const sock = socket(server);
 
-wss.on(WsEvents.CONNECTION, ws => {
-  console.log('connected', ws);
-  ws.on(WsEvents.MESSAGE, message => {
-    console.log('message', message);
-    broadcast(
-      {
-        message: 'hi',
-      },
-      ws,
-    );
-  });
-
-  ws.on(WsEvents.CLOSE, () => {
-    console.log('closed');
-  });
+sock.on('connection', function(socket) {
+  console.log('made connection with socket ' + socket.id);
 });

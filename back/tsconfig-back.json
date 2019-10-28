@@ -12,7 +12,8 @@
     "outDir": "../dist/back",
     "baseUrl": ".",
     "paths": {
-      "&back/*": ["./src/*"]
+      "&back/*": ["./src/*"],
+      "&public/*": ["../public"]
     }
   },
   "include": ["src/**/*"],

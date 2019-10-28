@@ -1,5 +1,6 @@
 import { observable, action, computed } from 'mobx';
 import { createContext } from 'react';
+import io from 'socket.io-client';
 
 export interface IUser {
   id: number;
@@ -40,6 +41,7 @@ class Store {
     };
     this.users.push(this.myUser);
     this.idCounter = this.idCounter + 1;
+    io();
     this.registred = true;
   };
 

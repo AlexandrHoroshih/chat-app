@@ -1,9 +1,20 @@
-import { observable, action, computed } from 'mobx';
+import { observable, action, computed, configure } from 'mobx';
 import { createContext } from 'react';
 import io from 'socket.io-client';
 
-export interface IUser {
+configure({ enforceActions: 'observed' });
+
+enum Events {
+  CONNECTION = 'connection',
+  MESSAGE = 'message',
+  DISCONNECT = 'disconnect',
+}
+
+interface UserStored {
   id: number;
+  username: string;
+}
+export interface IUser {
   username: string;
 }
 
@@ -19,15 +30,15 @@ export interface IMessage {
   username: string;
   text: string;
 }
-// todo: refactor handling datetimes
 
 class Store {
   idCounter: number = 0;
+  socket: any = null;
 
-  @observable myUser: IUser = { id: -1, username: '' };
+  @observable myUser: UserStored = { id: -1, username: '' };
   @observable registred: boolean = false;
   @observable isLoading: boolean = false;
-  @observable users: IUser[] = [];
+  @observable users: UserStored[] = [];
   @observable messages: MessageStored[] = [];
 
   @computed get userCount(): number {
@@ -41,8 +52,8 @@ class Store {
     };
     this.users.push(this.myUser);
     this.idCounter = this.idCounter + 1;
-    io();
     this.registred = true;
+    this.socket = io();
   };
 
   @action addUser = (username: string): void => {
@@ -60,7 +71,7 @@ class Store {
     });
   };
 
-  @action removeUser = (user: IUser): void => {
+  @action removeUser = (user: UserStored): void => {
     this.users = this.users.filter(item => item.id !== user.id);
   };
 }

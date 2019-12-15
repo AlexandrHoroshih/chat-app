@@ -8,7 +8,7 @@
     "start:back": "NODE_ENV=development nodemon --config ./nodemon.json"
   },
   "dependencies": {
-    "express": "^4.17.1",
+    "fastify": "^2.10.0",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
